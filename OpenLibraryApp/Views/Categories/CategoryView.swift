@@ -25,7 +25,11 @@ struct CategoryView: View {
             ScrollView(.horizontal, showsIndicators: true) {
                 HStack(alignment: .top) {
                     ForEach(viewModel.works, id: \.self.id) { work in
-                        BookView(work: work)
+                        NavigationLink{
+                            BookPage(work: work)
+                        } label: {
+                            BookView(work: work)
+                        }.buttonStyle(.plain)
                     }
                 }.padding(.horizontal)
             }
