@@ -9,8 +9,8 @@ import SwiftUI
 
 struct CategoriesPage: View {
     
+    var categories : [String]
     @State var text = ""
-    var categories : [String] = ["love", "horror","asdasd"]
     
     var body: some View {
         NavigationView{
@@ -27,6 +27,6 @@ struct CategoriesPage: View {
 
 struct CategoriesPage_Previews: PreviewProvider {
     static var previews: some View {
-            CategoriesPage()
+        CategoriesPage(categories: DataProvider().categories)
     }
 }

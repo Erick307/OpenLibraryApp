@@ -21,6 +21,8 @@
 		CC05E3C7295A269600AFF085 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC05E3C6295A269600AFF085 /* Subject.swift */; };
 		CC05E3C9295A276F00AFF085 /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC05E3C8295A276F00AFF085 /* Work.swift */; };
 		CC05E3CB295A283500AFF085 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC05E3CA295A283500AFF085 /* Author.swift */; };
+		CC2DBBC3295B833B0035FF5F /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2DBBC2295B833B0035FF5F /* DataProvider.swift */; };
+		CC2DBBC5295B86150035FF5F /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2DBBC4295B86150035FF5F /* CategoryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		CC05E3C6295A269600AFF085 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		CC05E3C8295A276F00AFF085 /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		CC05E3CA295A283500AFF085 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		CC2DBBC2295B833B0035FF5F /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		CC2DBBC4295B86150035FF5F /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 		CC05E3A3295A0C6500AFF085 /* OpenLibraryApp */ = {
 			isa = PBXGroup;
 			children = (
+				CC2DBBC6295B8DA40035FF5F /* ViewModels */,
+				CC2DBBC2295B833B0035FF5F /* DataProvider.swift */,
 				CC05E3C5295A267C00AFF085 /* Models */,
 				CC05E3B2295A10E300AFF085 /* Views */,
 				CC05E3A4295A0C6500AFF085 /* OpenLibraryAppApp.swift */,
@@ -145,6 +151,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		CC2DBBC6295B8DA40035FF5F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CC2DBBC4295B86150035FF5F /* CategoryViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC2DBBC5295B86150035FF5F /* CategoryViewModel.swift in Sources */,
 				CC05E3C0295A204E00AFF085 /* CategoryView.swift in Sources */,
 				CC05E3A7295A0C6500AFF085 /* ContentView.swift in Sources */,
 				CC05E3C9295A276F00AFF085 /* Work.swift in Sources */,
@@ -227,6 +242,7 @@
 				CC05E3B4295A110600AFF085 /* MainPage.swift in Sources */,
 				CC05E3B8295A121600AFF085 /* CategoriesPage.swift in Sources */,
 				CC05E3C2295A22CD00AFF085 /* BookView.swift in Sources */,
+				CC2DBBC3295B833B0035FF5F /* DataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

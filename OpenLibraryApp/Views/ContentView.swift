@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @EnvironmentObject var dataProvider : DataProvider
     @State var tabIndex : Int = 0
     
     var body: some View {
@@ -16,7 +17,7 @@ struct ContentView: View {
 //            MainPage().tabItem {
 //                Label("Main Page", systemImage: "book.closed")
 //            }
-            CategoriesPage().tabItem {
+            CategoriesPage(categories: dataProvider.categories).tabItem {
                     Label("Categories", systemImage: "books.vertical")
             }
             AuthorsPage().tabItem {
@@ -31,6 +32,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(DataProvider())
     }
 }

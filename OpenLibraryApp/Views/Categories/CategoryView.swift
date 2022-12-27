@@ -9,8 +9,9 @@ import SwiftUI
 
 struct CategoryView: View {
     
+    @StateObject var viewModel = CategoryViewModel()
+    
     let categoryName : String
-    var books = ["1","2","3","4"]
     
     
     var body: some View {
@@ -23,11 +24,13 @@ struct CategoryView: View {
             
             ScrollView(.horizontal, showsIndicators: true) {
                 HStack(alignment: .top) {
-                    ForEach(books, id: \.self) { book in
-                        BookView()
+                    ForEach(viewModel.works, id: \.self.id) { work in
+                        BookView(work: work)
                     }
                 }.padding(.horizontal)
             }
+        }.onAppear{
+            viewModel.loadWorks(of: categoryName)
         }
         
     }

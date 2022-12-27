@@ -10,10 +10,23 @@ import Foundation
 struct Work : Codable, Identifiable {
     
     var key : String
-    var coverId : String
+    var title : String
+    var coverId : Int
     var authors : [Author]
     var firstPublishYear : Int
     
+    var printableAuthor : String {
+        
+        guard authors.count > 0 else {
+            return "anonimus"
+        }
+        
+        return authors[0].name
+    }
+    
+    var imageUrl : URL? {
+        return URL(string: "https://covers.openlibrary.org/b/ID/\(coverId)-M.jpg")
+    }
 }
 
 extension Work {
